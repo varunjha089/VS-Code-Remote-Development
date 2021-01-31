@@ -344,3 +344,115 @@ That means you can do weired things, like add two Boolean numbers together.
 4
 ```
 
+## Strings in Python
+
+Strings in Python can be enclosed either with single quotes like `'Varun'` or double quotes, like `"Varun"`. 
+
+To use the same type of quote within a string, that quote needs to be **escaped** with a `\` - backwards slash.
+
+```python
+>>> greeting = 'Hello, World. My name is \'Varun Kumar\''
+>>> greeting
+"Hello, World. My name is 'Varun Kumar'"
+```
+
+This can also be achieved with mixed quotes.
+
+```python
+>>> greeting_two = 'Hello, World. My name is "Varun Kumar"'
+>>> greeting_two
+'Hello, World. My name is "Varun Kumar"'
+```
+
+Long multi-line strings can be written with `"""`( triple quotes ) in python.
+
+```python
+>>> long_greetings = """
+... Hello, World.
+... My name is Varun Kumar.
+... This is Python Programming.
+... """
+>>> long_greetings
+'\nHello, World.\nMy name is Varun Kumar.\nThis is Python Programming.\n'
+>>> print(long_greetings)
+
+Hello, World.
+My name is Varun Kumar.
+This is Python Programming.
+
+>>>
+```
+
+Python offers two methods of seeing what's inside a string -- `print()` and `repr()`. You can differentiate between the two by their purpose. 
+
+Use `print()` when you want to display readable output to end users. Use `repr()` to display unambiguous output to developers, like for debugging purposes.
+
+### String Formatting
+
+#### Concatenation in strings
+
+
+Strings can also be **concatenated** (added together) using the `+` operator to combine an arbitrary number of Strings. For example:
+
+```python
+>>> first_name = "Varun"
+>>> last_name = "Kumar"
+>>> my_name = first_name + last_name
+>>> my_name
+'VarunKumar'
+>>> # OR
+>>> my_name2 = first_name + " " + last_name
+>>> my_name2
+'Varun Kumar'
+```
+### f-strings
+
+There are several types of string formatting in Python, but f-strings introduced in Python 3.7 are the most modern and efficient. 
+
+f-strings start with the letter `f`. Variables and expressions can be inserted into the string by enclosing them in curly brackets.
+
+You don't need to convert variables to strings when using f-string formatting. It happens under the hood.
+
+```python
+>>> first_name = "Varun"
+>>> last_name = "Kumar"
+>>> my_name_fs = f"Hello, {first_name} {last_name}"
+>>> my_name_fs
+'Hello, Varun Kumar'
+```
+
+#### Trimming in strings
+
+Python strings have some very useful functions for trimming whitespace. `strip()` returns a new string after removing any leading and trailing whitespace. `rstrip()` does the same but only removes trailing whitespace, and `lstrip()` only trims leading whitespace.
+
+```python
+>>> my_string = "   Hello World!   "
+>>>
+>>> print(f">{my_string.strip()}<")
+>Hello World!<
+>>>
+>>> print(f">{my_string.lstrip()}<")
+>Hello World!   <
+>>>
+>>> print(f">{my_string.rstrip()}<")
+>   Hello World!<
+>>> 
+```
+
+These functions also accept an optional argument of characters to remove. Let’s remove all leading or trailing commas,
+```python
+>>> print(my_string.strip(","))
+   Hello World!
+```
+
+
+#### Replacing Characters
+
+With `replace()` function we can replace what we want to replace, and what we want to replace with.
+
+```python
+>>> my_string = "Hello, world!"
+>>> print(my_string.replace("world", "Varun"))
+Hello, Varun!
+```
+
