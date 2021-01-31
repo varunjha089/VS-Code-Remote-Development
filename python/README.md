@@ -456,3 +456,126 @@ With `replace()` function we can replace what we want to replace, and what we wa
 Hello, Varun!
 ```
 
+## Lists in Python
+
+Lists are one of the most powerful data types in Python. They’re used to store related items together.
+
+| type             	| `list`                                                                                	|
+|------------------	|---------------------------------------------------------------------------------------	|
+| use              	| Used for storing similar items, and in cases where items need to be added or removed. 	|
+| creation         	| `[]` or `list()` for empty list, or `[1, 2, 3]` for a list with items.                            	|
+| search methods   	| `my_list.index(item)` or `item in my_list`                                                                           	|
+| search speed     	| Searching for an item in a large list is slow brcause each item must be checked.                               	|
+| common methods   	| `>>> dir(list)` for help         	|
+| order preserved? 	| Yes. Items can be accessed by index.                                                  	|
+| mutable?         	| Yes                                                                                   	|
+| in-place sortable?        	| Yes. `my_list.sort()` will sort the list in-place. `my_list.sort(reverse=True)` will sort the list in-place in *descending* order. `my_list.reverse()` will *reverse the items* in `my_list` in-place.           	|
+
+
+
+
+
+Here is some example on list
+
+```python
+>>> type(list())                                          # Empty list
+<class 'list'>
+>>> name = ["varun", "abhinav", "suman", "rajesh"]        # List of name
+>>>   len(name)                                           # length of list
+4
+>>> "varun" in name
+True
+>>> "gaurav" in name
+False
+>>> name.index("suman")                                   # Searching for index of "suman"
+2
+>>> name.index("abhinav")                                 # Searching for index of "abhinav" 
+1
+>>> name[3]                                               # Accessing the list object at Index number 3.
+'rajesh'
+>>> name[0]                                               # Accessing the list object at Index number 0.
+'varun'
+```
+
+### Updating an item in a list
+
+To update a particular item in a `list` use square-bracket notion and assign a new value. `my_list[pos] = new_value`
+
+```python
+>>> name[3] = "vishal"
+>>> name
+['varun', 'abhinav', 'suman', 'vishal']
+```
+
+#### Code Formatting in List
+
+We can also *optionally* add a trailing comma after the last item. A trailing comma isn't required to create a valid list, but it does help minimize version control differences when working on a Python codebase with a team.
+
+```python
+>>> names = [
+... "Varun",
+... "Abhinav",
+... "Suman",
+... "Vishal",
+... ]
+```
+
+### Sorting in List
+
+We can `sort` a list with built-in `sorted()` function, like `sorted(my_list)`. To sort list in reverse order we can pass the second parameter to `sorted()` function, like `sorted(my_list, reverse=True)`.
+
+```python
+>>> name = ["varun", "abhinav", "suman", "rajesh"]
+>>> sorted(name)
+['abhinav', 'suman', 'varun', 'vishal'
+>>> sorted(name, reverse=True)
+['vishal', 'varun', 'suman', 'abhinav']
+>>> name
+['varun', 'abhinav', 'suman', 'vishal']
+```
+```python
+>>> numbers = [5, 10, 30, 2, 36, 100]
+>>> sorted(numbers)
+[2, 5, 10, 30, 36, 100]
+>>> sorted(numbers, reverse=True)
+[100, 36, 30, 10, 5, 2]
+```
+
+#### Sorting the list in-place
+
+You can call `my_list.sort()` on your list to sort it in increasing order, or `my_list.sort(reverse=True)` on the list to sort it backwards, in decreasing order. This operation will modify the list, and *doesn't return a value*.
+
+```python
+>>> name_copy = ['varun', 'abhinav', 'suman', 'vishal']
+>>> name_copy.sort()
+>>> name_copy
+['abhinav', 'suman', 'varun', 'vishal']
+>>> name_copy.sort(reverse=True)
+>>> name_copy
+['vishal', 'varun', 'suman', 'abhinav']
+```
+```python
+>>> numbers_copy = [5, 10, 30, 2, 36, 100]
+>>> numbers_copy.sort()
+>>> numbers_copy
+[2, 5, 10, 30, 36, 100]
+>>> numbers_copy.sort(reverse=True)
+>>> numbers_copy
+[100, 36, 30, 10, 5, 2]
+```
+
+#### Reverse the list 
+
+To reverse the items of a list, call `my_list.reverse()` on it.
+
+```python
+>>> numbers = [3, 36, 24, 26, 100]
+>>> numbers.reverse()
+>>> numbers
+[100, 26, 24, 36, 3]
+```
+
+### Finding Methods on List
+
+Just call `dir()` on `list`, to get the further help call `help()` on one of the `methods` mentioned on `list`, like `help(list.append)`.
+
