@@ -1,4 +1,4 @@
-# Pyhton Development
+# Python Programming Tutorial
 
 Pyhon is one of the High-Level Programming Language, but also the easiest one to write `Hello, World!`. To write `Hello, World!` just type.
 ```py 
