@@ -235,3 +235,62 @@ to_bytes(self, /, length, byteorder, *, signed=False)
 
 **Press `q` to exit the screen**
 
+## Numbers
+
+There are three different types of numbers in python: `int`, `float` and `complex`.
+
+Integer are as follows:-
+
+```python
+>>> age = 22
+>>> negative_number = -5
+>>> zero = 0
+```
+
+Floats are as follows:
+
+```python
+>>> x = 36.0
+>>> y = -98.26
+>>> z = 0.0
+```
+
+Complex number are as follows:
+
+```python
+>>> x = 52 + 26j
+>>> type(x)
+<class 'complex'>
+```
+
+We can change the data types of a variable just by calling the method on it.
+
+```python
+>>> x = int('26')
+>>> x
+26
+>>> type(x)
+<class 'int'>
+```
+
+Python also have a `decimal` library, which has certain benefits over the `float` datatype. For information can be found on Python Documentation page, [Decimal Library](https://docs.python.org/3/library/decimal.html).
+
+
+## Mathematical Operations
+
+- '+' -> adds the number
+- '-' -> substract the number
+- '*' -> multiply the number
+- '/' -> divide the number, it will return a `float` data-type
+- '//' -> initger division, it will return an `int` data-type
+
+Example of `Float` and `Integer` division
+
+```python
+>>> 10 / 5      # Float division
+2.0
+>>> 10 // 5     # Integer division
+2
+```
+If we add `float` and `int` the resulting type will be `float`.
+
