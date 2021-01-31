@@ -6,6 +6,8 @@ print("Hello, World!")
 ```
 It is also great at scripting and comes with some awsesome Standard Libraries.
 
+**NOTE :- All the commands ate for Debian based system. For another one please consider the online help.
+
 ## Invironment Setup
 To create a virtual environment in Python follow following steps :-
 
@@ -57,3 +59,45 @@ To deactivate virtual environment:-
 ```console
 (env) ubuntu@ip:~$ deactivate
 ```
+
+Keyboard shortcut, `CTRL + D` also works.
+
+## Easter Egg in Python
+
+```console
+(env) ubuntu@ip:~$ python
+
+Python 3.8.5 (default, Jul 28 2020, 12:59:40) 
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from __future__ import braces
+  File "<stdin>", line 1
+SyntaxError: not a chance
+>>> 
+>>> 
+>>> 
+>>> 
+>>> import this
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+```
+
