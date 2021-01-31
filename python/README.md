@@ -6,9 +6,7 @@ print("Hello, World!")
 ```
 It is also great at scripting and comes with some awsesome Standard Libraries.
 
-{{% notice info %}}
-All the commands ate for Debian based system. For another one please consider the online help.
-{{% /notice %}}
+``All the commands ate for Debian based system. For another one please consider the online help.``
 
 ## Invironment Setup
 To create a virtual environment in Python follow following steps :-
@@ -47,13 +45,15 @@ ubuntu@ip:~$ source env/bin/activate
 Python 3.8.5 (default, Jul 28 2020, 12:59:40) 
 [GCC 9.3.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
+```
+```python
 >>> print("hello, world")
 hello, world
 >>>
 ```
 
 To exit out of repl type:
-```console
+```python
 >>> exit()
 ```
 
@@ -72,6 +72,8 @@ Keyboard shortcut, `CTRL + D` also works.
 Python 3.8.5 (default, Jul 28 2020, 12:59:40) 
 [GCC 9.3.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
+```
+```python
 >>> from __future__ import braces
   File "<stdin>", line 1
 SyntaxError: not a chance
@@ -136,4 +138,100 @@ Successfully installed certifi-2020.12.5 chardet-4.0.0 idna-2.10 requests-2.25.1
 
 ```python
 >>> x = 42
+>>> x
+42
+>>> x = "Hello, World"
+>>> x
+'Hello, World'
+>>>
 ```
+
+Python is a dynamic language, so we don't have to declare the variable in python. Here the value of `x` changed from number to string. [Dynamic Types Meet Smart Conventions](https://www.youtube.com/watch?v=YklKUuDpX5c) is an awesome content to look on.
+
+### Variable Naming
+
+Following things must be kept in mind while naming a variable :-
+- You can’t start your variable name with a digit eg., 1, 52, etc.
+- Number at the end of variable is fine.
+- Variable name also can't contain special characters, such as `!`,  `@`,  `#`, `$`,  `%`.
+- Other names won't result in a syntax error, but can cause weird bugs that are hard to diagnose and troubleshoot. You don't want to name your variables the same as the *types* that we'll be working with. For example **don't** name your variables `int`, `list`, `dict`, `str`, etc.
+
+To know more about Python naming conventions look at [PEP8](https://www.python.org/dev/peps/pep-0008/#naming-conventions) or pep8.org site under [Naming Convention](https://pep8.org/#naming-conventions).
+
+### Some Special Types
+
+There are some special types in python
+- No-Value, `None`, or Null Value
+
+```python
+>>> x = None
+>>> x
+```
+
+## Getting `help` in the REPL
+
+There are some useful methods in Python we can use in REPL to understand Pyhton programme.
+ 
+- `type()`, 
+- `dir()`, and 
+- `help()`
+
+### `type()`
+
+Python has a very easy way of determining the type of something: with the `type()` function.
+
+Just pass any object into the `type()` method:
+
+```python
+>>> name = "Varun Kumar"
+>>> type(name)
+<class 'str'>
+```
+
+For example, make a new variable `age`, and check its `type`.
+
+```python
+>>> age = 21
+>>> type(age)
+<class 'int'>
+```
+
+We'll see that the type is `str`, Python's version of a string. Now that we know this object's type, we can
+pass the type into other methods.
+
+### `dir()`
+
+
+```Python
+>>> dir(int)
+['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'as_integer_ratio', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']
+```
+
+`dir()` stands for directory. If we check the type of `int` (notice, no quotes here) we'll see all the methods available on intiger in Python. 
+
+### `help()` 
+
+The last useful method is `help()`. You can pass a type, method, or other object to `help()` to instantly see available documentation about the method, the parameters it expects, and what it returns.
+
+Let's try this in the REPL, and look up the documentation for the `isupper` method in String. We access it with the period symbol (`.`). This is called dot-notation.
+
+```python
+>>> help(int.to_bytes)
+
+to_bytes(self, /, length, byteorder, *, signed=False)
+    Return an array of bytes representing an integer.
+    
+    length
+      Length of bytes object to use.  An OverflowError is raised if the
+      integer is not representable with the given number of bytes.
+    byteorder
+      The byte order used to represent the integer.  If byteorder is 'big',
+      the most significant byte is at the beginning of the byte array.  If
+      byteorder is 'little', the most significant byte is at the end of the
+      byte array.  To request the native byte order of the host system, use
+      `sys.byteorder' as the byte order value.
+    signed
+```
+
+**Press `q` to exit the screen**
+
