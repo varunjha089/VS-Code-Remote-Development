@@ -284,13 +284,63 @@ Python also have a `decimal` library, which has certain benefits over the `float
 - '/' -> divide the number, it will return a `float` data-type
 - '//' -> initger division, it will return an `int` data-type
 
-Example of `Float` and `Integer` division
+
+If we add `float` and `int` the resulting type will be `float`. The division of two `int` will give `float`, unless we use the inieger division operator `//`.
+
+Example of `Float` and `Integer` operations
 
 ```python
+>>> 3.0 + 2     # Addition of float and integer
+5.0
 >>> 10 / 5      # Float division
 2.0
 >>> 10 // 5     # Integer division
 2
 ```
-If we add `float` and `int` the resulting type will be `float`.
+
+Python also has several built-in methods for working with numbers, like `min()` for minimum value, `max()` for maximum value, and `round()` for rounding to the nearest integer. 
+
+```python
+>>> min( 5, 16, 98, 2)
+2
+>>> max( 5, 16, 98, 2)
+98
+>>> round(36.4)
+36
+```
+
+Python also offers a [`math` module](https://docs.python.org/3/library/math.html) in the standard library for more mathematical operations.
+
+## Boolean Types
+
+In Python, Booleans are of type `bool`. Surprisingly, the boolean types `True` and `False` are also numbers under the hood.
+
+* `True` is `1`.
+* `False` is `0`.
+
+For `True`
+
+```python
+>>> int(True)
+1
+>>> True == 1
+True
+```
+
+For `False`
+```python
+>>> int(False)
+0
+>>> False == 0
+True
+```
+
+That means you can do weired things, like add two Boolean numbers together.
+
+```python
+>>> True + False                      # 1 + 0
+1
+>>> True + True + True + True         # 1 + 1 + 1 + 1
+4
+```
 
