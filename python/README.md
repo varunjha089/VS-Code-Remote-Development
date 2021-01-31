@@ -697,44 +697,8 @@ Adding, Removing, Changing, and Finding Items in `list` can be done as follows :
 | **remove** an item                               	| `my_list.remove(item)`                	| -                 	| `ValueError` if `item` not in `my_list`    	|
 | **remove** the last item, or an item at an index 	| `my_list.pop()` or `my_list.pop(pos)` 	| `item`            	| `IndexError` if `pos` >= `len(my_list)`    	|
 
-## Common Mistakes in Strings and Lists
 
-### `str`ings 
-
-#### Issue: Mismatch string quotes.
-
-```python
->>> name = "Hello'
-  File "<stdin>", line 1
-    name = "Hello'
-                 ^
-SyntaxError: EOL while scanning string literal
-```
-
-`Fix` for above issue is 
-
-```python
->>> name = "Hello"
->>> name
-'Hello'
-```
-
-#### Issue: Trying to print `str`ing and `number` using "+" symbol.
-
-```python
->>> 4 + "Fourty Four"
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: unsupported operand type(s) for +: 'int' and 'str'
-```
-
-`Fix` for above issue is 
-```python
->>> str(4) + "Fourty Four"
-'4Fourty Four'
-```
-
-### Type Conversion
+## Type Conversion in Python
 
 We can change the type of variable in python programme:-
 
@@ -771,7 +735,45 @@ False
 1
 ```
 
-### `list`s
+## Common Mistakes in Strings and Lists
+
+### `str`ing's 
+
+#### Issue: Mismatch string quotes.
+
+```python
+>>> name = "Hello'
+  File "<stdin>", line 1
+    name = "Hello'
+                 ^
+SyntaxError: EOL while scanning string literal
+```
+
+`Fix` for above issue is 
+
+```python
+>>> name = "Hello"
+>>> name
+'Hello'
+```
+
+#### Issue: Trying to print `str`ing and `number` using "+" symbol.
+
+```python
+>>> 4 + "Fourty Four"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+```
+
+`Fix` for above issue is 
+```python
+>>> str(4) + "Fourty Four"
+'4Fourty Four'
+```
+
+
+### `list`'s
 
 #### Issue: Missed the comma between two value
 
@@ -810,3 +812,4 @@ IndentationError: unexpected indent
 >>> name
 'varun'
 ```
+
