@@ -679,3 +679,20 @@ Using `pop()` will also **return** the item that was in that position. That's us
 >>> colors
 ['Blue']
 ```
+
+### `list` cheat sheet
+
+Adding, Removing, Changing, and Finding Items in `list` can be done as follows :- 
+
+| action                                           	| method                                	| returns           	| possible errors                            	|
+|--------------------------------------------------	|---------------------------------------	|-------------------	|--------------------------------------------	|
+| check length                                     	| `len(my_list)`                        	| `int`             	|                                            	|
+| **add:** to the end                              	| `my_list.append(item)`                	| -                 	|                                            	|
+| **insert:** at position                          	| `my_list.insert(pos, item)`           	| -                 	|                                            	|
+| **update:** at position                          	| `my_list[pos] = item`          	| -        -         	| `IndexError` if `pos` is >= `len(my_list)`                                          	|
+| **extend:** add items from another list          	| `my_list.extend(other_list)`          	| -                 	|                                            	|
+| is item in list?                                 	| `item in my_list`                     	| `True` or `False` 	|                                            	|
+| **index** of item                                	| `my_list.index(item)`                 	| `int`             	| `ValueError` if `item` is not in `my_list` 	|
+| **count** of item                                	| `my_list.count(item)`                 	| `int`             	|                                            	|
+| **remove** an item                               	| `my_list.remove(item)`                	| -                 	| `ValueError` if `item` not in `my_list`    	|
+| **remove** the last item, or an item at an index 	| `my_list.pop()` or `my_list.pop(pos)` 	| `item`            	| `IndexError` if `pos` >= `len(my_list)`    	|
