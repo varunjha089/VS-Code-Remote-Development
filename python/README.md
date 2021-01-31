@@ -6,7 +6,9 @@ print("Hello, World!")
 ```
 It is also great at scripting and comes with some awsesome Standard Libraries.
 
-**NOTE :- All the commands ate for Debian based system. For another one please consider the online help.
+{{% notice info %}}
+All the commands ate for Debian based system. For another one please consider the online help.
+{{% /notice %}}
 
 ## Invironment Setup
 To create a virtual environment in Python follow following steps :-
@@ -101,3 +103,37 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 ```
 
+
+## Installing the python library.
+
+Installing the Requests python library :- 
+
+```console
+(env) ubuntu@ip:~$ pip install requests
+Collecting requests
+  Downloading requests-2.25.1-py2.py3-none-any.whl (61 kB)
+     |████████████████████████████████| 61 kB 8.5 MB/s 
+Collecting chardet<5,>=3.0.2
+  Downloading chardet-4.0.0-py2.py3-none-any.whl (178 kB)
+     |████████████████████████████████| 178 kB 22.2 MB/s 
+Collecting urllib3<1.27,>=1.21.1
+  Downloading urllib3-1.26.3-py2.py3-none-any.whl (137 kB)
+     |████████████████████████████████| 137 kB 23.8 MB/s 
+Collecting idna<3,>=2.5
+  Downloading idna-2.10-py2.py3-none-any.whl (58 kB)
+     |████████████████████████████████| 58 kB 6.2 MB/s 
+Collecting certifi>=2017.4.17
+  Downloading certifi-2020.12.5-py2.py3-none-any.whl (147 kB)
+     |████████████████████████████████| 147 kB 20.5 MB/s 
+Installing collected packages: urllib3, idna, chardet, certifi, requests
+Successfully installed certifi-2020.12.5 chardet-4.0.0 idna-2.10 requests-2.25.1 urllib3-1.26.3
+
+(env) ubuntu@ip:~$ 
+(env) ubuntu@ip:~$ 
+```
+
+## Variables in Pyhton
+
+```python
+>>> x = 42
+```
