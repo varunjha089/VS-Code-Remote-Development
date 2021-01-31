@@ -696,3 +696,117 @@ Adding, Removing, Changing, and Finding Items in `list` can be done as follows :
 | **count** of item                                	| `my_list.count(item)`                 	| `int`             	|                                            	|
 | **remove** an item                               	| `my_list.remove(item)`                	| -                 	| `ValueError` if `item` not in `my_list`    	|
 | **remove** the last item, or an item at an index 	| `my_list.pop()` or `my_list.pop(pos)` 	| `item`            	| `IndexError` if `pos` >= `len(my_list)`    	|
+
+## Common Mistakes in Strings and Lists
+
+### `str`ings 
+
+#### Issue: Mismatch string quotes.
+
+```python
+>>> name = "Hello'
+  File "<stdin>", line 1
+    name = "Hello'
+                 ^
+SyntaxError: EOL while scanning string literal
+```
+
+`Fix` for above issue is 
+
+```python
+>>> name = "Hello"
+>>> name
+'Hello'
+```
+
+#### Issue: Trying to print `str`ing and `number` using "+" symbol.
+
+```python
+>>> 4 + "Fourty Four"
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+```
+
+`Fix` for above issue is 
+```python
+>>> str(4) + "Fourty Four"
+'4Fourty Four'
+```
+
+### Type Conversion
+
+We can change the type of variable in python programme:-
+
+```python
+>>> str(3)
+'3'
+>>> int('3')
+3
+>>> int(True)
+1
+>>> int(False)
+0
+>>> bool(1)
+True
+>>> bool(0)
+False
+```
+#### Some More fun with Type Conversion in Python:
+
+```python
+>>> bool(5)
+True
+>>> bool(-1)
+True
+>>> bool("Hello")
+True
+>>> bool()
+False
+>>> bool("")
+False
+>>> str(True)
+'True'
+>>> int(True)
+1
+```
+
+### `list`s
+
+#### Issue: Missed the comma between two value
+
+```python
+>>> numbers = [5, 6 7]
+  File "<stdin>", line 1
+    numbers = [5, 6 7]
+                    ^
+SyntaxError: invalid syntax
+```
+
+#### Issue: Missed the closing brace
+
+```console
+(env) ubuntu@ip:~$ python missing_closing_brace.py 
+  File "missing_closing_brace.py", line 2
+    name = "varun"
+    ^
+SyntaxError: invalid syntax
+```
+
+### Indentation
+
+```python
+>>>     name = "varun"
+  File "<stdin>", line 1
+    name = "varun"
+    ^
+IndentationError: unexpected indent
+```
+
+`Fix` for this issue
+
+```python
+>>> name = "varun"
+>>> name
+'varun'
+```
