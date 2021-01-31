@@ -579,3 +579,103 @@ To reverse the items of a list, call `my_list.reverse()` on it.
 
 Just call `dir()` on `list`, to get the further help call `help()` on one of the `methods` mentioned on `list`, like `help(list.append)`.
 
+### Adding Items
+
+Let's start with a list of two names.
+
+```python
+>>> names = ['vishal', 'varun', 'suman', 'abhinav']
+```
+
+##### `my_list.append(item)` adds to the end of `my_list`
+
+We can use `my_list.append(item)` to add an additional item to the end of the list.
+
+```python
+>>> names.append("tarun")
+>>> names
+['vishal', 'varun', 'suman', 'abhinav', 'tarun']
+```
+
+##### `my_list.insert(pos, item)` inserts an item into `my_list` at the given position
+
+```python
+>>> names.insert(0, "shivam")
+>>> names
+['shivam', 'vishal', 'varun', 'suman', 'abhinav', 'tarun']
+```
+
+##### `my_list.extend(other_list)` adds all the contents of `other_list` to `my_list`
+
+```python
+>>> names = ['shivam', 'vishal', 'varun', 'suman', 'abhinav', 'tarun']
+>>> colors = ["Red", "Blue", "Green", "Yellow"]
+>>> names
+['shivam', 'vishal', 'varun', 'suman', 'abhinav', 'tarun']
+>>> names.extend(colors)
+>>> names
+['shivam', 'vishal', 'varun', 'suman', 'abhinav', 'tarun', 'Red', 'Blue', 'Green', 'Yellow']
+```
+
+##### Use the `my_list.count(item)` method to find out how many times an item appears in a list.
+
+```python
+>>> names.count("shivam")
+1
+>>> names.count("Lenord")
+0
+```
+
+### Updating Items
+
+To update items in a list, use the *position* of the item you'd like to change using square bracket `[]` syntax. Like: `my_list[pos] = new_item`
+
+For example:
+
+```python
+>>> names[9] = "Orange"
+>>> names
+['shivam', 'vishal', 'varun', 'suman', 'abhinav', 'tarun', 'Red', 'Blue', 'Green', 'Orange']
+```
+
+### Removing Items
+
+There are a few ways to remove items from a list.
+
+##### Use `my_list.remove(item)` to remove the *first* instance of the item
+
+Be careful. `remove()` only removes the first instance of the item from the list, which isn't always what we want to do.
+
+```python
+>>> colors
+['Red', 'Blue', 'Green', 'Yellow']
+>>> colors.remove("Red")
+>>> colors
+['Blue', 'Green', 'Yellow']
+```
+
+If we try to remove the item which is not in the list, It will create a `ValueError`.
+
+```python
+>>> colors
+['Blue', 'Green', 'Yellow']
+>>> colors.remove("Red")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
+```
+
+#### Use `my_list.pop()` to remove the last item, or `my_list.pop(index)` to remove the item at that index
+
+Using `pop()` will also **return** the item that was in that position. That's useful if we want to save the item.
+
+```python
+>>> colors
+['Blue', 'Green', 'Yellow']
+>>> colors.pop()
+'Yellow'
+>>> colors.pop()
+'Green'
+>>> colors
+['Blue']
+```
