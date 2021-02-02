@@ -12,6 +12,8 @@ It is also great at scripting and comes with some awsesome Standard Libraries.
 To create a virtual environment in Python follow following steps :-
 
 ```console
+ubuntu@ip:~$ sudo apt install python3-venv
+
 ubuntu@ip:~$ python3 -m venv env
 
 ubuntu@ip:~$ source env/bin/activate
