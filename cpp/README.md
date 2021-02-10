@@ -27,7 +27,13 @@ g++ hello.cpp && ./a.out
 |---|---|
 | **`cout`** | Stands for `console output`, it prints the string beween the quotes. |
 | **`cin`** | Stands for `console input`, it takes input from the console and assign it to a variable. |
-| **``** | |
+| **`endl`** | It tells `cout` to add an **end line**(carriage return) character. |
+<!-- | **``** | | -->
+<!-- | **``** | | -->
+<!-- | **``** | | -->
+<!-- | **``** | | -->
+<!-- | **``** | | -->
+<!-- | **``** | | -->
 
 ## File Details
 
@@ -51,7 +57,7 @@ int main(){
 ```
 
 
-When we use **`using namespace std;`**.
+#### When we use **`using namespace std;`**.
 ```cpp
 #include <iostream>
 
@@ -66,3 +72,9 @@ int main(){
 
 **Make sure to look at all `std` in first one.**
 
+### Workflow while you are new
+
+**Reference :- Sharan Volin C++ book by packt**
+1. Always starts with a working C++ code example.
+2. Make your code modification in small steps. Compile after each line, instead of writing code for hours and then compiling at once.
+3. Don't get discouraged.
