@@ -21,3 +21,11 @@ If your file name is hello.cpp
 ```console
 g++ hello.cpp && ./a.out
 ```
+
+
+## File Details
+
+| File Name | Description |
+|---|---|
+| [first.cpp](/programming/cpp/first.cpp) | Just creating the first C++ file for testing. It asks for a number and then prints triangle 
+| [p021.cpp](/programming/cpp/p021.cpp) | This file is from page 21 of "Sharan Volin", "C++" book by Packt. |
