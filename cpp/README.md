@@ -21,7 +21,13 @@ If your file name is hello.cpp
 ```console
 g++ hello.cpp && ./a.out
 ```
+## Quick Reference
 
+| Command | Description |
+|---|---|
+| **`cout`** | Stands for `console output`, it prints the string beween the quotes. |
+| **`cin`** | Stands for `console input`, it takes input from the console and assign it to a variable. |
+| **``** | |
 
 ## File Details
 
